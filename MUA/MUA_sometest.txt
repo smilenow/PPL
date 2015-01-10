@@ -1,0 +1,83 @@
+// testing
+make "AA 123
+print thing AA
+print : AA
+erase AA
+print : AA
+print isname AA
+print isname BB
+
+make "AA read
+"Apple
+print : AA
+
+make "LL readlinst
+[ 123 abc ]
+print : LL
+
+make "LL [ 123 [ 3 2 1 ] abc ]
+print thing LL
+
+print random 123
+print random 123
+print random 123
+
+print sqrt 4
+print sqrt 7
+print sqrt 10
+
+print isnumber abc
+print isnumber thing LL
+print isnumber 123
+
+make "num 100.1
+print isnumber thing num
+
+
+print isword thing num
+print isword thing LL
+print isword 100
+print isword 123.321
+print isword "abc
+
+
+
+print islist thing LL
+print islist thing num
+print islist 100
+print islist 123.321
+print islist "abc
+
+test isempty [ ]
+iftrue
+[
+	make "AA 123
+	print thing AA
+	
+	
+	
+	
+	
+make "fib
+[
+	[ n ]
+	[
+		test or eq : n 1 eq : n 2
+		iftrue [ output 1 stop ]
+		output add fib sub : n 2 fib sub : n 1
+	]
+]
+print fib 7
+make "fib20 fib 20
+make "fib50 fib 50
+
+
+make "factor
+[
+	[ n ]
+	[
+		test eq : n 1
+		iftrue [ output 1 stop ]
+		output mul : n factor sub : n 1
+	]
+]
