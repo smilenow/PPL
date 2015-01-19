@@ -226,6 +226,12 @@ public:
     virtual void fun(stringstream&);
 };
 
+class _fun_join_ret: public op{
+public:
+    virtual value* _fun();
+    virtual value* _fun(stringstream&);
+};
+
 class _fun_first: public op{
 public:
     virtual value* _fun();

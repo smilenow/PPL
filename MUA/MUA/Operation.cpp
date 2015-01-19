@@ -74,8 +74,8 @@ void _fun_make::fun(){
         if (_namespace_stack[curstack].count(ss) != 0 ) _namespace_stack[curstack][ss] = v;
         else _namespace_stack[curstack].insert(make_pair(ss,v));
     }
-    if (_namespace.count(ss) != 0 ) _namespace[ss] = v;
-    else _namespace.insert(make_pair(ss,v));
+    else if (_namespace.count(ss) != 0 ) _namespace[ss] = v;
+        else _namespace.insert(make_pair(ss,v));
 }
 
 value* _fun_thing::_fun(){
@@ -529,6 +529,23 @@ void _fun_join::fun(){
     cur->next = new list(new value((string)"End of list"));
 }
 
+value* _fun_join_ret::_fun(){
+    value* v1 = get_value();
+    if (!v1->check_list()){
+        cout << "The first parameter of join is not list, error " << endl;
+        exit(1);
+    }
+    value* v2 = get_value();
+    list* cur = v1->key_list;
+    while (cur!=NULL){
+        if (cur->key->check_string() && cur->key->key_string == "End of list") break;
+        cur = cur->next;
+    }
+    cur->key = v2;
+    cur->next = new list(new value((string)"End of list"));
+    return v1;
+}
+
 value* _fun_first::_fun(){
     value *v1 = get_value();
     if (v1->check_string()){
@@ -858,8 +875,8 @@ void _fun_make::fun(stringstream& sin){
         if (_namespace_stack[curstack].count(ss) != 0 ) _namespace_stack[curstack][ss] = v;
         else _namespace_stack[curstack].insert(make_pair(ss,v));
     }
-    if (_namespace.count(ss) != 0 ) _namespace[ss] = v;
-    else _namespace.insert(make_pair(ss,v));
+    else if (_namespace.count(ss) != 0 ) _namespace[ss] = v;
+        else _namespace.insert(make_pair(ss,v));
 }
 
 value* _fun_thing::_fun(stringstream& sin){
@@ -1311,6 +1328,23 @@ void _fun_join::fun(stringstream& sin){
     }
     cur->key = v2;
     cur->next = new list(new value((string)"End of list"));
+}
+
+value* _fun_join_ret::_fun(stringstream& sin){
+    value* v1 = get_value(sin);
+    if (!v1->check_list()){
+        cout << "The first parameter of join is not list, error " << endl;
+        exit(1);
+    }
+    value* v2 = get_value(sin);
+    list* cur = v1->key_list;
+    while (cur!=NULL){
+        if (cur->key->check_string() && cur->key->key_string == "End of list") break;
+        cur = cur->next;
+    }
+    cur->key = v2;
+    cur->next = new list(new value((string)"End of list"));
+    return v1;
 }
 
 value* _fun_first::_fun(stringstream& sin){

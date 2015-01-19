@@ -3,6 +3,9 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "_fun_iftrue::fun(std::__1::basic_stringstream&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;&amp;):Operation.cpp">
+      </ContextState>
+      <ContextState
          contextName = "_fun_make::fun():Operation.cpp">
       </ContextState>
       <ContextState
@@ -21,19 +24,22 @@
          contextName = "_fun_eq::_fun(std::__1::basic_stringstream&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;&amp;):Operation.cpp">
       </ContextState>
       <ContextState
+         contextName = "get_value():GetValue.cpp">
+      </ContextState>
+      <ContextState
          contextName = "_fun_list::_fun():Operation.cpp">
       </ContextState>
       <ContextState
          contextName = "execlist(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;):Operation.cpp">
          <PersistentStrings>
             <PersistentString
+               value = "_namespace_stack_ret">
+            </PersistentString>
+            <PersistentString
                value = "_test_ret">
             </PersistentString>
             <PersistentString
                value = "curstack">
-            </PersistentString>
-            <PersistentString
-               value = "_namespace_stack_ret">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -46,7 +52,15 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "get_value():GetValue.cpp">
+         contextName = "_fun_make::fun(std::__1::basic_stringstream&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;&amp;):Operation.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "curstack">
+            </PersistentString>
+            <PersistentString
+               value = "totstack">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "get_value(std::__1::basic_stringstream&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;&amp;):StringStreamGetValue.cpp">

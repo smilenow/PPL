@@ -38,12 +38,14 @@ void init(){
     _exec_value.insert(make_pair("isname", new _fun_isname()));
     _exec_value.insert(make_pair("read", new _fun_read()));
     _exec_value.insert(make_pair("readlinst", new _fun_readlinst()));
+    _exec_value.insert(make_pair("join", new _fun_join_ret()));
     _exec_value.insert(make_pair("add", new _fun_add()));
     _exec_value.insert(make_pair("sub", new _fun_sub()));
     _exec_value.insert(make_pair("mul", new _fun_mul()));
     _exec_value.insert(make_pair("div", new _fun_div()));
     _exec_value.insert(make_pair("mod", new _fun_mod()));
     _exec_value.insert(make_pair("eq", new _fun_eq()));
+    _exec_value.insert(make_pair("equ", new _fun_eq()));
     _exec_value.insert(make_pair("gt", new _fun_gt()));
     _exec_value.insert(make_pair("lt", new _fun_lt()));
     _exec_value.insert(make_pair("and", new _fun_and()));
